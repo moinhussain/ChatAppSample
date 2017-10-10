@@ -1,0 +1,16 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Sample Chat Application",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Moin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "mongoose": "^4.12.1"
+  }
+}
