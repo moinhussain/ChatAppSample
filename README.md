@@ -1,8 +1,8 @@
 # ChatAppSample
 Sample Chat Application
 
-Mongo Database name: ChatDB
-Collection: ChatRoom
+Mongo Database name: ChatDB <br/>
+Collection: ChatRoom <br/>
 
 {
 "_id":MongoId,
