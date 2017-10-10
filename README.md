@@ -4,24 +4,24 @@ Sample Chat Application
 Mongo Database name: ChatDB <br/>
 Collection: ChatRoom <br/>
 
-{
-"_id":MongoId,
-"roomId:'Room_1_100',
-"messages":[
-{
-"messageId": ObjectId
-"senderId" : 1,
-"recieverId":100,
-"message":"Hi how are you",
-"date":"2017-09-10 13:45:00"
-},
-{
-"messageId": ObjectId
-"senderId" : 100,
-"recieverId":1,
-"message":"I am fine",
-"date":"2017-09-10 13:47:00"
-}
-]
+{ <br/>
+"_id":MongoId, <br/>
+"roomId:'Room_1_100', <br/>
+"messages":[ <br/>
+{ <br/>
+"messageId": <ObjectId>, <br/>
+"senderId" : 1, <br/>
+"recieverId":100,<br/>
+"message":"Hi how are you",<br/>
+"date":"2017-09-10 13:45:00"<br/>
+},<br/>
+{<br/>
+"messageId": <ObjectId>,<br/>
+"senderId" : 100,<br/>
+"recieverId":1,<br/>
+"message":"I am fine",<br/>
+"date":"2017-09-10 13:47:00"<br/>
+}<br/>
+]<br/>
 
 }
