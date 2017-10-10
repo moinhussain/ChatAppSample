@@ -45,7 +45,7 @@ app.post('/saveMessage',function(req,res){
                 if (err){
                  res.send(err);
                 }		
-                var message = { userId:req.body.senderId, messageId:  mongoose.Types.ObjectId(), message: req.body.message };
+                var message = { senderId:req.body.senderId,recieverId:req.body.recieverId, messageId:  mongoose.Types.ObjectId(), message: req.body.message,date:new Date() };
                 chatRoom.messages.push(message);
                 chatRoom.save(function(err) {
                         if (err){
