@@ -6,7 +6,7 @@ var urlencodeParser = bodyParser.urlencoded({extended:false});
 app.use(urlencodeParser);
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ChatDB');
-var ChatRoom     = require('./app/models/chatroom');
+var ChatRoom  = require('./app/models/chatroom');
 
 /**
  * Initiate a conversation by creating room
@@ -24,10 +24,12 @@ app.post('/initiateChatRoom',function(req, res){
       if(!doc){
         var chatRoom = new ChatRoom({ roomId: roomId, messages:[]});
         chatRoom.save(function (err) {
-          if (err) return handleError(err);
+            if (err){
+                 res.send(err);
+                }
           // saved!
           $responseObj = {"status":201,"message":"Room created successfuly",data:{"roomId":roomId}};
-          res.json(JSON.stringify($responseObj));
+          res.json($responseObj);
         })  
       }
 });
@@ -64,7 +66,7 @@ app.post('/saveMessage',function(req,res){
 /**
  * Update a message for a given roomId and messageId
  */
-app.put('/editMessage/:roomId/:messageId/',function(req,res){
+app.put('/editMessage/:roomId/:messageId',function(req,res){
                
     var roomId   = req.params.roomId;
     var messageId = req.params.messageId;
