@@ -10,6 +10,10 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ChatDB');
 
 
+
+
+
+
 var ChatRoom     = require('./app/models/chatroom');
  
 app.post('/saveMessage',function(req,res){
